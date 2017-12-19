@@ -8,7 +8,7 @@ MANPREFIX = ${PREFIX}/share/man
 
 # flags
 CPPFLAGS += -D_DEFAULT_SOURCE -DVERSION=\"${VERSION}\"
-CFLAGS   += -g --std=gnu99 -pedantic -Wall -Wno-overlength-strings -Os ${STATIC} ${CPPFLAGS}
+CFLAGS   += -g --std=gnu99 -pedantic -Wall -Wno-overlength-strings -O0 ${STATIC} ${CPPFLAGS}
 LDFLAGS  += -lm -L${X11LIB}
 
 CPPFLAGS_DEBUG := -DDEBUG_BUILD
