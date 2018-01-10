@@ -158,3 +158,6 @@ uninstall-service: uninstall-service-systemd
 uninstall-service-systemd:
 	rm -f ${DESTDIR}${SERVICEDIR_SYSTEMD}/dunst.service
 endif
+
+activate-mate: install
+	ln -sf ${DESTDIR}${SERVICEDIR_DBUS}/org.knopwob.dunst.service /usr/share/dbus-1/services/org.freedesktop.mate.Notifications.service
