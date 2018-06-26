@@ -1,5 +1,7 @@
-#!/bin/bash
+#!/bin/bash -eux
 sudo apt build-dep dunst
+sudo apt install libxrandr-dev # was still missing
+
 make
 export PREFIX=/usr
 # export SERVICE_PREFIX=/usr/
